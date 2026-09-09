@@ -1,3 +1,4 @@
+package Hackerrank;
 import java.util.*;
 
 class Solution {
