@@ -1,0 +1,153 @@
+============================================================
+                         COURSE PROGRAM
+============================================================
+
+1. COURSE CLASS
+------------------------------------------------------------
+Create a class named `Course` with the following attributes:
+
+    courseId    - int
+    courseName  - String
+    courseAdmin - String
+    quiz        - int
+    handson     - int
+
+Requirements:
+
+    - All attributes must be private.
+    - Create getter and setter methods for all attributes.
+    - Create a parameterized constructor as required.
+
+
+2. COURSEPROGRAM CLASS
+------------------------------------------------------------
+Create a class named `CourseProgram` with a `main` method.
+
+Implement the following static methods:
+
+2.1 findAvgOfQuizByAdmin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Signature:
+
+    findAvgOfQuizByAdmin(Course[] courses, String courseAdmin)
+
+Description:
+
+    - Accept an array of Course objects and a course administrator
+      name as input.
+    - Find the average quiz score for courses managed by the
+      specified administrator.
+    - Return the average as an int.
+    - Return 0 if no course matches the specified administrator.
+
+Output requirement:
+
+    - If the returned value is not 0, print the average.
+    - If the returned value is 0, print:
+
+          No Course found.
+
+
+2.2 sortCourseByHandsOn
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Signature:
+
+    sortCourseByHandsOn(Course[] courses, int handson)
+
+Description:
+
+    - Accept an array of Course objects and a handson value as input.
+    - Return the Course objects whose handson value is less than
+      the specified value.
+    - Sort the returned courses in ascending order by handson.
+    - Return null if no course matches the condition.
+
+Output requirement:
+
+    - If the returned array is not null, print the name of each
+      course in the returned array.
+    - If the returned array is null, print:
+
+          No Course found with mentioned attribute.
+
+Call both static methods from the `main` method.
+
+
+3. SAMPLE INPUT 1
+------------------------------------------------------------
+Course 1:
+    courseId:    111
+    courseName:  kubernetes
+    courseAdmin: Nisha
+    quiz:        40
+    handson:     10
+
+Course 2:
+    courseId:    321
+    courseName:  cassandra
+    courseAdmin: Roshini
+    quiz:        30
+    handson:     15
+
+Course 3:
+    courseId:    457
+    courseName:  Apache Spark
+    courseAdmin: Nisha
+    quiz:        30
+    handson:     12
+
+Course 4:
+    courseId:    987
+    courseName:  site core
+    courseAdmin: Tirth
+    quiz:        50
+    handson:     20
+
+Admin for average quiz: Nisha
+Maximum handson value:  17
+
+SAMPLE OUTPUT 1
+------------------------------------------------------------
+35
+kubernetes
+Apache Spark
+cassandra
+
+
+4. SAMPLE INPUT 2
+------------------------------------------------------------
+Course 1:
+    courseId:    111
+    courseName:  kubernetes
+    courseAdmin: Nisha
+    quiz:        40
+    handson:     10
+
+Course 2:
+    courseId:    321
+    courseName:  cassandra
+    courseAdmin: Roshini
+    quiz:        30
+    handson:     15
+
+Course 3:
+    courseId:    457
+    courseName:  Apache Spark
+    courseAdmin: Nisha
+    quiz:        30
+    handson:     12
+
+Course 4:
+    courseId:    987
+    courseName:  site core
+    courseAdmin: Tirth
+    quiz:        50
+    handson:     20
+
+Admin for average quiz: Shubhamk
+Maximum handson value:  5
+
+SAMPLE OUTPUT 2
+------------------------------------------------------------
+No Course found
+No Course found with mentioned attributes.
